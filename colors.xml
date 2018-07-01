@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="submitButtonColor">#00931b</color>
+    <color name="resetButtonColor">#cc041b</color>
+    <color name="pageBackgroundColor">#e3e5e8</color>
+    <color name="titleBackgroundColor">#009914</color>
+    <color name="titleColor">#000</color>
+    <color name="scoreColor">#009914</color>
+</resources>
