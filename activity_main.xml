@@ -251,7 +251,8 @@
                 android:textAllCaps="true"
                 android:textColor="#fff"
                 android:background="@color/submitButtonColor"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="submit"/>
 
             <Button
                 android:id="@+id/reset"
@@ -262,7 +263,8 @@
                 android:textAllCaps="true"
                 android:textColor="#fff"
                 android:background="@color/resetButtonColor"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="reset"/>
 
         </LinearLayout>
 
