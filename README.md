@@ -1,1 +1,1 @@
-# PracticeApp
+# PracticeQuizApp
