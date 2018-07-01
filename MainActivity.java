@@ -15,7 +15,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView question1_CheckBox, question2_RadioButton, question3_EditText, question4_ImageView, score_TextView;
+    TextView question1_CheckBox, question2_RadioButton, question3_EditText, question4_ImageView, score_TextView, displayScore;
     EditText question3_EditTextAnswer;
     Button submit, reset;
     RadioButton question4_symmetricalBalance, question4_asymmetricalBalance, question2_fork, question2_shoe, question2_paintbrush;
@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-/*
 
-    CheckBoxes: Question on primary colors
- */
+    /*
+
+        CheckBoxes: Question on primary colors
+     */
     public void onSelectCheckBox(View view) {
         question1checkBox_red = findViewById(R.id.question1checkBox_red);
         question1checkBox_blue = findViewById(R.id.question1checkBox_blue);
@@ -46,36 +47,35 @@ public class MainActivity extends AppCompatActivity {
         boolean isBlackChecked = question1checkBox_black.isChecked();
         boolean isGreenChecked = question1checkBox_green.isChecked();
 
-        if (isRedChecked && isBlueChecked && !isBlackChecked && !isGreenChecked){
-            pointsForCorrectAnswers +=1;
+        if (isRedChecked && isBlueChecked && !isBlackChecked && !isGreenChecked) {
+            pointsForCorrectAnswers += 1;
         }
     }
     /*
     Radio Group 1: Question on painting tool
      */
 
-    public void onSelectRadioButtonGroup1 (View view) {
+    public void onSelectRadioButtonGroup1(View view) {
 
         question2_fork = findViewById(R.id.question2_fork);
         question2_shoe = findViewById(R.id.question2_shoe);
         question2_paintbrush = findViewById(R.id.question2_paintbrush);
 
         boolean checked = ((RadioButton) view).isChecked();
-        switch(view.getId())
-        {
+        switch (view.getId()) {
             case R.id.question2_fork:
                 if (checked)
-                    pointsForCorrectAnswers +=0;
+                    pointsForCorrectAnswers += 0;
                 break;
 
             case R.id.question2_shoe:
                 if (checked)
-                    pointsForCorrectAnswers +=0;
+                    pointsForCorrectAnswers += 0;
                 break;
 
             case R.id.question2_paintbrush:
                 if (checked)
-                    pointsForCorrectAnswers +=1;
+                    pointsForCorrectAnswers += 1;
                 break;
         }
     }
@@ -84,28 +84,41 @@ public class MainActivity extends AppCompatActivity {
     Edit text: Question on Rainbow Color
      */
 
-    public String
+    public String getquestion3_EditTextAnswerUserInput() {
+
+        question3_EditTextAnswer = findViewById(R.id.question3_EditTextAnswer);
+
+        String textAnswer = question3_EditTextAnswer.getText().toString();
+        return textAnswer;
+    }
+
+    public void question3_EditText() {
+        String textAnswer = getquestion3_EditTextAnswerUserInput();
+
+        if (textAnswer.trim().equalsIgnoreCase("blue")) {
+            pointsForCorrectAnswers += 1;
+        }
+    }
 
     /*
     Radio Group 2: Question on balance
      */
 
-    public void onSelectRadioButtonGroup2 (View view){
+    public void onSelectRadioButtonGroup2(View view) {
 
         question4_symmetricalBalance = findViewById(R.id.question4_symmetricalBalance);
         question4_asymmetricalBalance = findViewById(R.id.question4_asymmetricalBalance);
 
         boolean checked = ((RadioButton) view).isChecked();
-        switch(view.getId())
-        {
+        switch (view.getId()) {
             case R.id.question4_symmetricalBalance:
                 if (checked)
-                    pointsForCorrectAnswers +=1;
+                    pointsForCorrectAnswers += 1;
                 break;
 
             case R.id.question4_asymmetricalBalance:
                 if (checked)
-                    pointsForCorrectAnswers +=0;
+                    pointsForCorrectAnswers += 0;
                 break;
         }
     }
@@ -113,11 +126,10 @@ public class MainActivity extends AppCompatActivity {
     /*
     Show score
      */
+
     public void submit(){
-        Toast.makeText(this, "Total Scored = " + pointsForCorrectAnswers, Toast.LENGTH_LONG).show();  
+        Toast.makeText(this, "Total Scored = " + pointsForCorrectAnswers, Toast.LENGTH_LONG).show();
     }
-
-
 
 
     /*
@@ -128,23 +140,24 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.question3_EditTextAnswer);
         editText.setText("");
 
-        CheckBox checkBox =findViewById(R.id.question1checkBox_red);
+        CheckBox checkBox = findViewById(R.id.question1checkBox_red);
         checkBox.setChecked(false);
 
-            checkBox =findViewById(R.id.question1checkBox_blue);
+        checkBox = findViewById(R.id.question1checkBox_blue);
         checkBox.setChecked(false);
 
-            checkBox =findViewById(R.id.question1checkBox_black);
+        checkBox = findViewById(R.id.question1checkBox_black);
         checkBox.setChecked(false);
 
-            checkBox =findViewById(R.id.question1checkBox_green);
+        checkBox = findViewById(R.id.question1checkBox_green);
         checkBox.setChecked(false);
 
         RadioGroup radioGroup = findViewById(R.id.RadioGroup1);
         radioGroup.clearCheck();
 
-            radioGroup = findViewById(R.id.RadioGroup2);
+        radioGroup = findViewById(R.id.RadioGroup2);
         radioGroup.clearCheck();
 
     }
+
 }
