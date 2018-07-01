@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="which_are_primary_colours">Which are primary colours?</string>
+    <string name="welcome_to_my_art_quiz">welcome to my art quiz</string>
+    <string name="red">Red.</string>
+    <string name="black">Black.</string>
+    <string name="blue">Blue.</string>
+    <string name="green">Green.</string>
+    <string name="which_of_the_following_is_a_tool_used_for_painting">Which of the following is a tool used for painting?</string>
+    <string name="fork">Fork</string>
+    <string name="shoe">Shoe.</string>
+    <string name="paintbrush">Paint Brush.</string>
+    <string name="submit_answers">Submit Answers!</string>
+    <string name="reset_quiz">Reset Quiz!</string>
+    <string name="what_is_the_fifth_color_of_the_rainbow">What is the fifth color of the rainbow?</string>
+    <string name="write_your_answer">Write your answer here.</string>
+    <string name="which_type_of_balance_is_displayed_in_the_diagram_below">Which type of balance is displayed in the diagram below?</string>
+    <string name="symmetrical_balance">Symmetrical Balance</string>
+    <string name="asymmetrical_balance">Asymmetrical Balance</string>
+    <string name="score">Score: </string>
+</resources>
