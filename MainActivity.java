@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     Show score
      */
 
-    public void submit(){
+    public void submit(View view){
         Toast.makeText(this, "Total Scored = " + pointsForCorrectAnswers, Toast.LENGTH_LONG).show();
     }
 
